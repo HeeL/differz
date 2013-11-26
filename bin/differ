@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require 'gli'
+require 'differ'
+
+include GLI::App
+
+program_desc 'Compare two yaml-files and show the missing keys.'
+
+version Differ::VERSION
+
+desc 'Only show the difference between yaml-files without editing them'
+command :show do |c|
+  c.action do |global_options, options, args|
+    puts "show command"
+  end
+end
+
+desc 'Allows you to fill missing keys in yaml file'
+command :edit do |c|
+  c.action do |global_options, options, args|
+    puts "edit command"
+  end
+end
+
+pre do |global,command,options,args|
+  true
+end
+
+post do |global,command,options,args|
+end
+
+on_error do |exception|
+  true
+end
+
+exit run(ARGV)
