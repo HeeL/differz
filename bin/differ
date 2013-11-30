@@ -12,7 +12,7 @@ version Differ::VERSION
 desc 'Only show the difference between yaml-files without editing them'
 command :show do |c|
   c.action do |global_options, options, args|
-    puts "show command"
+    puts Differ::Comparer.new(args[0], args[1]).show_diff
   end
 end
 

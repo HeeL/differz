@@ -15,3 +15,5 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+file1.yml
+file2.yml
