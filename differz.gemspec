@@ -3,16 +3,16 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'differ/version'
+require 'differz/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "differ"
-  spec.version       = Differ::VERSION
+  spec.name          = "differz"
+  spec.version       = Differz::VERSION
   spec.authors       = ["HeeL"]
   spec.email         = ["parizhskiy@gmail.com"]
   spec.description   = %q{Compare two yaml-files and show the missing keys.}
   spec.summary       = %q{It shows the differences in keys of passed yaml-files.}
-  spec.homepage      = "https://github.com/heel/differ"
+  spec.homepage      = "https://github.com/heel/differz"
   spec.license       = "MIT"
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_runtime_dependency('gli','2.8.1')
   spec.bindir = 'bin'
-  spec.executables << 'differ'
+  spec.executables << 'differz'
 end

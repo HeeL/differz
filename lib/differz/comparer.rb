@@ -1,4 +1,4 @@
-module Differ
+module Differz
 
   class Comparer
 

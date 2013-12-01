@@ -1,18 +1,18 @@
 #!/usr/bin/env ruby
 
 require 'gli'
-require 'differ'
+require 'differz'
 
 include GLI::App
 
 program_desc 'Compare two yaml-files and show the missing keys.'
 
-version Differ::VERSION
+version Differz::VERSION
 
 desc 'Only show the difference between yaml-files without editing them'
 command :show do |c|
   c.action do |global_options, options, args|
-    puts Differ::Comparer.new(args[0], args[1]).show_diff
+    puts Differz::Comparer.new(args[0], args[1]).show_diff
   end
 end
 

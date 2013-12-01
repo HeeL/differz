@@ -6,7 +6,7 @@ That can be handy if you develop a multilingual application and your translation
 
 You can use it from the command line:
 ```
-differ --help
+differz --help
 ```
 
 GLOBAL OPTIONS
@@ -27,7 +27,7 @@ COMMANDS
 
 For the `show` and `edit` commands you have to pass at least two arguments: paths for yaml files that should be compared. Here is an example of usage:
 ```
-differ show file1.yml file2.yml
+differz show file1.yml file2.yml
 ```
 
 As a result, you will see all the keys from file1.yml that are missing in file2.yml. The result will be shown in format like this:
